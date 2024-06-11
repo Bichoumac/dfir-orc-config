@@ -352,6 +352,13 @@
             <output  name="FuzzyHash.log" source="StdOutErr" />
         </command>
 
+        <command keyword="GetJumpList" optional="yes">
+            <execute name="Orc.exe" run="self:#GetThis" />
+            <argument>/config=res:#GetJumpList_config.xml</argument>
+            <output  name="JumpList.7z" source="File" argument="/out={FileName}" />
+            <output  name="JumpList.log" source="StdOutErr" />
+        </command>
+
         <command keyword="FatInfoPE" queue="flush" optional="yes">
             <execute name="Orc.exe" run="self:#FatInfo" />
             <argument>/config=res:#FatInfoHashPE_config.xml</argument>
@@ -487,6 +494,13 @@
             <argument>/config=res:#GetFuzzyHash_offline_config.xml /fuzzyhash=tlsh,ssdeep</argument>
             <output  name="FuzzyHash.7z" source="File" argument="/out={FileName}" />
             <output  name="FuzzyHash.log" source="StdOutErr" />
+        </command>
+
+        <command keyword="GetJumpList_offline">
+            <execute name="Orc.exe" run="self:#GetThis" />
+            <argument>/config=res:#GetJumpList_offline_config.xml</argument>
+            <output  name="JumpList.7z" source="File" argument="/out={FileName}" />
+            <output  name="JumpList.log" source="StdOutErr" />
         </command>
 
         <command keyword="GetSystemHives_offline">
