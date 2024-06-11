@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<getthis reportall="">
+  <location>*</location>
+  <samples MaxSampleCount="0">
+    <sample name="JumpList">
+      <ntfs_find path_match="AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations\*" />
+      <ntfs_find path_match="AppData\Roaming\Microsoft\Windows\Recent\CustomDestinations\*" />
+    </sample>
+  </samples>
+</getthis> 
